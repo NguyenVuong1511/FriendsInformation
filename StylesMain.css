@@ -3,26 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  height: 100%;
-}
-body {
-  width: 100%;
-  background-image: linear-gradient(to right top, #ff0000, #ffaa00);
-  animation: Doimau 2s ease-in-out;
-  -webkit-animation: Doimau 2s ease-in-out;
-  -moz-animation: Doimau 2s ease-in-out;
-  -o-animation: Doimau 2s ease-in-out;
-  animation-iteration-count: infinite;
-}
-@keyframes Doimau {
-    from {
-        background-image: linear-gradient(to left, #ff0000, #ffaa00);
-      }
-      to {
-        background-image: linear-gradient(to top, #ff0000, #ffaa00);
-      }
-}
 #Tieude{
   display: flex;
   justify-content: center;
