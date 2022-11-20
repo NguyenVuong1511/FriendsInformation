@@ -48,6 +48,7 @@
     width: 100%;
     height: 100%;
     box-shadow: none;
+    background-position: 50% 50%;
 }
 .items:nth-child(3) .contain{
     opacity: 0;
