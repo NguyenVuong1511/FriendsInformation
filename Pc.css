@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Tieude{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+}
+@media only screen and (max-height: 420px){
+    .Tieude{
+        font-size: 25px;
+    }
+}
+.Noidung{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 70%;
+    background-color: aliceblue;
+    box-shadow: 0 30px 50px #dbdbdb;
+}
+#slide{
+    width: max-content;
+    margin-top: 40px;
+}
+.items{
+    width: 10%;
+    height: 20%;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translate(0,-50%);
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgb(53, 48, 48);
+}
+.items .contain{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    width: 30%;
+    text-align: left;
+    padding: 0;
+    color: antiquewhite;
+    transform: translate(0,-50%);
+    display: none;
+    font-family: 'Dancing Script', cursive;
+}
+.items:nth-child(1),
+.items:nth-child(2){
+  left: 0;
+  top: 0;
+  transform: translate(0,0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+}
+.items:nth-child(3){
+  left: 80%;
+}
+.items:nth-child(4){
+  left: calc(80% + 11%);
+}
+.items:nth-child(5){
+  left: calc(80% + 22%);
+}
+.items:nth-child(n+6){
+  left: calc(80% + 44%);
+  opacity: 0;
+}
+.items:nth-child(2) .contain{
+    display: block;
+    z-index: 11111;
+}
+.items .name{
+    color: rgb(0, 255, 247);
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 0;
+    animation: Showcontain 0.8s ease-in-out 1 forwards;
+}
+.items .des{
+    margin: 20px 0;
+    opacity: 0;
+    animation: Showcontain 0.9s ease-in-out 0.2s 1 forwards;
+}
+.items button{
+    padding: 10px 20px;
+    border: none;
+    opacity: 0;
+    animation: Showcontain 1s ease-in-out 0.4s 1 forwards;
+}
+.items button:hover{
+    background-color: antiquewhite;
+}
+.items button a{
+    text-decoration: none;
+    color: black;
+}
+@keyframes Showcontain{
+    from{
+      opacity: 0;
+      transform: translate(0,100px);
+      filter: blur(33px);
+    }
+    to{
+      opacity: 1;
+      transform: translate(0,0);
+      filter: blur(0);
+    }
+}
+.button{
+    position: absolute;
+    bottom: 30px;
+    z-index: 222222;
+    text-align: center;
+    width: 100%;
+}
+.button button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    transition: 0,5s;
+}
+.button button:hover{
+    background-color: antiquewhite;
+}
