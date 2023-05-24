@@ -133,7 +133,7 @@
     border-radius: 50%;
     border: 1px none #555;
     transition: 0,5s;
-    background-color: rgb(13, 255, 0);
+    background-color: rgb(251, 251, 251, 0.17);
 }
 .button button:hover{
     background-color: rgba(250, 235, 215, 0);
